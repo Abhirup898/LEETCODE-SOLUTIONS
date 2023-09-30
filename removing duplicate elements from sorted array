@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int removeDuplicates(vector<int> &a)
+    {
+    int n = a.size();//here the vector size is determined
+    int i = 0;
+    for (int j = 1; j < n; j++) {//here the loop is being iterated from j=1 to n 
+        if (a[i] != a[j]) { //here the value at index i and j are compared
+            i++;
+            a[i] = a[j];//if condition satisfies it will be replaced with unique value
+        }
+    }
+    return i + 1;//here the vector upto the unique element index is returned
+    }
+};
